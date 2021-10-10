@@ -54,63 +54,8 @@ C语言定义有以下记号及单词：
 
 ## 4.2 记号的正规文法
 
-1. 标识符的文法：
+见实验报告
     
-    $id\rightarrow {\rm letter}\ rid\\rid \rightarrow {\rm \epsilon}\ |\ {\rm letter}\ rid\ |\ {\rm digit}\ rid$
-    
-2. 无符号整数的文法：
-    
-    $digits\rightarrow {\rm digit} \ remainder\\remainder \rightarrow {\rm \epsilon}\ |\ {\rm digit} \ remainder$
-    
-3. 无符号数的文法：
-    
-    $num\rightarrow digit \ num1\\num1 \rightarrow digit \ num1 \ |\ .\ num2\ |\ {\rm E}\ num4\ |\ {\rm \epsilon}\\num2\rightarrow digit \ num3\\num4 \rightarrow+\ digits\ |\ -\ digits\ |\ {\rm digit}\ num5\\digits \rightarrow {\rm digit}\ num5\\num5 \rightarrow {\rm digit}\ num5\ |\ {\rm \epsilon}$
-    
-4. 关系运算符的文法：
-    
-    $relop \rightarrow <\ |\ <equal\ |\ =\ |\ >\ |\ >equal\ |\ !equal\\equal\rightarrow =$
-    
-5. 算术运算符的文法：
-    
-    $ariop\rightarrow +\ |\ -\ |\ *\ |\ /\ |\ =\ |\ +plus\ |\ -minus\\plus \rightarrow +\\ minus \rightarrow -$
-    
-6. 逻辑运算符的文法：
-    
-    $logop \rightarrow \&and\ |\ |or\ |\ ! \\ and \rightarrow \& \\ or \rightarrow |$
-    
-7. 位操作运算符的文法：
-    
-    $bitop \rightarrow \& \ |\ |\ |\ \sim \ |\ \hat{}\ |\ <left\ |\ >right\\ left \rightarrow < \\right \rightarrow >$
-    
-8. 赋值运算符的文法：
-    
-    $assop \rightarrow =\ |\ =equal\ |\ +equal\ |\ -equal\ |\ *equal\ |\ /equal\ |\ \\ \qquad \qquad \%equal\ |\ \&equal\ |\ |equal\ |\ \hat{}equal\ |\ >right\ |\ <left \\ right \rightarrow >equal \\ left \rightarrow <equal \\ equal \rightarrow =$
-    
-9. 条件运算符的文法：
-    
-    $conop \rightarrow ?$
-    
-10. 逗号运算符的文法：
-    
-    $comop \rightarrow ,$
-    
-11. 指针运算符的文法：
-    
-    $ponop \rightarrow *\ |\ \&$
-    
-12. 特殊运算符的文法：
-    
-    $speop \rightarrow ( \ |\ )\ |\ [\ |\ ]\ |\ .\ |\ -right\\right \rightarrow >$
-    
-13. 标点符号的文法：
-    
-    $symbol \rightarrow \{ \ |\ \}\ |\ :\ |\ '\ |\ "\ |\ ;\ |\ ,\ |\ \#$
-    
-14. 注释头符号的文法：
-    
-    $note \rightarrow /star\ |\ /slash \\ star \rightarrow * \\ slash \rightarrow /$
-    
-
 ## 4.3 状态转换图
 
 为每种记号的文法构造出相应的状态转换图，让这些状态转换图共用一个初态，并对相似的文法进行一定的调整以简化转换图，可以得到词法分析程序的状态转换图如下图所示：
